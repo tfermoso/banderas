@@ -8,6 +8,7 @@ function cargarBanderas(){
         for (let i = 0; i < data.length; i++) {
             let img = document.createElement("img");
             img.src = data[i].flags.png;
+            img.className = "bandera";
             img.alt = data[i].name.common;
             banderas.appendChild(img);
         }
