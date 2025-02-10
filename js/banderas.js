@@ -1,4 +1,5 @@
-fetch("https://restcountries.com/v3.1/all")
+function cargarBanderas(){
+    fetch("https://restcountries.com/v3.1/all")
     .then(response =>{
         $("#cargando").hide();
         return response.json()})
@@ -11,4 +12,7 @@ fetch("https://restcountries.com/v3.1/all")
             banderas.appendChild(img);
         }
     })
-    .catch(error => console.error(error));
+    .catch(error => console.error(error))
+};
+
+setTimeout(cargarBanderas, 5000);
