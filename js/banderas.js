@@ -12,6 +12,9 @@ function cargarBanderas(){
             img.alt = data[i].name.common;
             banderas.appendChild(img);
         }
+        $(".bandera").click(function(){ 
+            alert("El país seleccionado es: " + $(this).attr("alt"));
+        })
     })
     .catch(error => console.error(error))
 };
