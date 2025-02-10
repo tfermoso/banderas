@@ -1,3 +1,6 @@
+function onMouseOver(params) {
+    console.log("Mouse sobre la bandera de: " + params.target.alt);
+}
 function cargarBanderas(){
     fetch("https://restcountries.com/v3.1/all")
     .then(response =>{
@@ -10,6 +13,7 @@ function cargarBanderas(){
             img.src = data[i].flags.png;
             img.className = "bandera";
             img.alt = data[i].name.common;
+            img.addEventListener("mouseover", onMouseOver);
             banderas.appendChild(img);
         }
         $(".bandera").click(function(){ 
