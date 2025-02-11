@@ -38,4 +38,34 @@ foreach ($data as $pais) {
     echo $pais['name']['common'] . "<img style='width:20px' src='{$pais['flags']['png']}' alt='' ><br>";
 }
 ?>
-<img src='{{}}' alt='' >
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banderas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.7.1.min.js" defer></script>
+    <!--<script src="js/banderas.js" defer></script>-->
+</head>
+<body>
+    <!--<img id="cargando" src="img/loading-gif.gif" alt="" srcset="">-->
+    <header>
+        <h1>Banderas</h1>
+    </header>
+    <main id="banderas">
+       <?php
+
+// Recorrer el array e imprimir el nombre común de cada país
+foreach ($data as $pais) {
+    // En la API v3.1, el nombre del país se encuentra en $pais['name']['common']
+    echo $pais['name']['common'] . "<img style='width:20px' src='{$pais['flags']['png']}' alt='' ><br>";
+}
+       ?>
+    </main>
+    <footer>
+        <p>&copy; 2025 - Banderas</p>
+    </footer>
+    
+</body>
+</html>

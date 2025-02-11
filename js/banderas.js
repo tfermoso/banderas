@@ -21,7 +21,7 @@ function cargarBanderas(){
     .catch(error => console.error(error))
 };
 
-setTimeout(cargarBanderas, 5000);
+//setTimeout(cargarBanderas, 5000);
 function onMouseOver(params) {
     console.log("Mouse sobre la bandera de: " + params.target.alt);
 }
