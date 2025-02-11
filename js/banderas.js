@@ -1,6 +1,4 @@
-function onMouseOver(params) {
-    console.log("Mouse sobre la bandera de: " + params.target.alt);
-}
+
 function cargarBanderas(){
     fetch("https://restcountries.com/v3.1/all")
     .then(response =>{
@@ -24,3 +22,6 @@ function cargarBanderas(){
 };
 
 setTimeout(cargarBanderas, 5000);
+function onMouseOver(params) {
+    console.log("Mouse sobre la bandera de: " + params.target.alt);
+}
